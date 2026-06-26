@@ -1,0 +1,122 @@
+.splash-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, rgba(46, 125, 50, 0.15), transparent 24%),
+    linear-gradient(180deg, #eef8ef 0%, #fafcfb 100%);
+  padding: 24px;
+}
+
+.splash-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(46, 125, 50, 0.12);
+  border-radius: 30px;
+  padding: 48px 36px;
+  box-shadow: 0 30px 80px rgba(21, 55, 19, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  animation: splashFadeIn 1.2s ease both;
+}
+
+.splash-logo {
+  width: clamp(140px, 24vw, 220px);
+  animation: splashZoom 1.6s ease both;
+  box-shadow: 0 24px 50px rgba(46, 125, 50, 0.14);
+  border-radius: 30px;
+}
+
+.splash-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.splash-welcome {
+  margin: 0;
+  color: #3a542c;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.splash-card h1 {
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  color: #1f331e;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.splash-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.splash-loader span {
+  color: #3e593b;
+  font-size: 0.95rem;
+}
+
+.splash-progress {
+  width: 220px;
+  height: 10px;
+  background: rgba(46, 125, 50, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #a9d56d 0%, #2e7d32 100%);
+  border-radius: 999px;
+  animation: progressFill 2.5s ease forwards;
+}
+
+@keyframes splashZoom {
+  0% {
+    transform: scale(0.82);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes splashFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progressFill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .splash-card {
+    padding: 34px 24px;
+  }
+
+  .splash-progress {
+    width: 180px;
+  }
+}

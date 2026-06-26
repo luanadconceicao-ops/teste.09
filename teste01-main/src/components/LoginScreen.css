@@ -1,0 +1,234 @@
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px 18px;
+  background: radial-gradient(circle at top, rgba(46, 125, 50, 0.14), transparent 28%),
+    linear-gradient(180deg, #eef8ef 0%, #fbfcfb 100%);
+}
+
+.login-screen .card {
+  width: 100%;
+  max-width: 460px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(40, 88, 40, 0.12);
+  border-radius: 28px;
+  padding: 30px;
+  box-shadow: 0 22px 48px rgba(26, 55, 29, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-screen .card::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(46, 125, 50, 0.16), transparent 60%);
+  pointer-events: none;
+}
+
+.login-screen .card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.login-header {
+  display: grid;
+  gap: 14px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.logo-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 32px;
+  background: #eef7ee;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(46, 125, 50, 0.14);
+  box-shadow: 0 18px 34px rgba(46, 125, 50, 0.08);
+}
+
+.login-logo {
+  width: 90px;
+  animation: loginLogoEntrance 1.2s ease both;
+}
+
+.login-header h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: #19331f;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.login-subtitle {
+  margin: 0;
+  color: #556b57;
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.login-screen form {
+  display: grid;
+  gap: 14px;
+}
+
+.login-screen input,
+.login-screen select {
+  min-height: 52px;
+  font-size: 1rem;
+}
+
+.login-screen input::placeholder {
+  color: rgba(43, 74, 41, 0.45);
+}
+
+.login-screen .form-row.two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.login-screen .error,
+.login-screen .info-message {
+  border-radius: 18px;
+  padding: 15px 16px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.login-screen .error {
+  background: rgba(255, 95, 95, 0.14);
+  color: #941d27;
+  border: 1px solid rgba(255, 95, 95, 0.22);
+}
+
+.login-screen .info-message {
+  background: rgba(72, 165, 77, 0.14);
+  color: #204824;
+  border: 1px solid rgba(72, 165, 77, 0.22);
+}
+
+.login-screen button,
+.login-screen .outline,
+.login-screen .guest-button,
+.login-screen .nav-button,
+.login-screen .action-button {
+  width: 100%;
+  min-height: 52px;
+  border-radius: 16px;
+  padding: 13px 18px;
+  font-weight: 700;
+  color: #1a2a1f;
+  transition: all 0.22s ease;
+}
+
+.login-screen .primary-button,
+.login-screen .action-button.accent {
+  background: linear-gradient(135deg, #2e7d32 0%, #6bb850 100%);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(46, 125, 50, 0.18);
+}
+
+.login-screen .primary-button:hover,
+.login-screen .action-button.accent:hover {
+  transform: translateY(-1px);
+}
+
+.login-screen .action-button.secondary,
+.login-screen .outline.secondary,
+.login-screen .nav-button {
+  background: rgba(46, 125, 50, 0.1);
+  color: #224c2a;
+  border: 1px solid rgba(46, 125, 50, 0.16);
+}
+
+.login-screen .action-button.secondary:hover,
+.login-screen .outline.secondary:hover,
+.login-screen .nav-button:hover {
+  background: rgba(46, 125, 50, 0.16);
+}
+
+.login-screen .guest-button {
+  background: #ffffff;
+  color: #18411d;
+  border: 1px solid rgba(46, 125, 50, 0.16);
+  box-shadow: 0 10px 22px rgba(29, 61, 30, 0.08);
+  margin-top: 10px;
+}
+
+.login-screen .guest-button:hover {
+  background: #f7fbf5;
+  transform: translateY(-1px);
+}
+
+.login-screen .login-actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+@media (max-width: 520px) {
+  .login-screen {
+    padding: 20px 14px;
+  }
+
+  .login-screen .card {
+    padding: 24px;
+  }
+
+  .login-header {
+    gap: 12px;
+  }
+
+  .logo-wrapper {
+    width: 78px;
+    height: 78px;
+  }
+
+  .login-logo {
+    width: 42px;
+  }
+
+  .login-screen .form-row.two-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .login-screen .card {
+    padding: 20px;
+  }
+
+  .login-screen input,
+  .login-screen select {
+    min-height: 48px;
+  }
+
+  .login-screen button,
+  .login-screen .outline,
+  .login-screen .guest-button,
+  .login-screen .nav-button,
+  .login-screen .action-button {
+    padding: 12px 16px;
+  }
+}
+
+@keyframes loginLogoEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

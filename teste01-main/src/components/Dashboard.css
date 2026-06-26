@@ -1,0 +1,720 @@
+.screen.dashboard-screen {
+  display: grid;
+  gap: 24px;
+  width: 100%;
+}
+
+.header-card,
+.welcome-card,
+.section,
+.status-card,
+.resource-card,
+.invite-card,
+.contacts-card,
+.emergency-card,
+.denuncia-card,
+.support-summary-card,
+.game-card,
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.header-card {
+  padding: 26px;
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.12), rgba(33, 150, 243, 0.08));
+  border-color: rgba(38, 93, 46, 0.12);
+}
+
+.header-card-top,
+.section-top,
+.welcome-actions,
+.card-heading,
+.contact-info,
+.invite-code-actions,
+.form-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-card-top {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header-card-main,
+.welcome-info,
+.games-panel-header,
+.section-header,
+.trofeu-summary,
+.contact-list,
+.quick-contacts {
+  display: grid;
+  gap: 14px;
+}
+
+.header-card-main h2,
+.welcome-card h2,
+.section-title,
+.games-title {
+  margin: 0;
+  font-size: clamp(1.25rem, 3vw, 1.8rem);
+  font-weight: 800;
+  color: #12221a;
+  line-height: 1.25;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.header-note,
+.card-desc,
+.section-note,
+.contact-detail,
+.welcome-note,
+.games-desc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.section-label,
+.badge,
+.status-pill,
+.games-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.section-label {
+  color: #2e7d32;
+  background: rgba(46, 125, 50, 0.12);
+}
+
+.badge,
+.status-pill {
+  background: #f7d24a;
+  color: #5a4200;
+}
+
+.badge.convidado {
+  display: none;
+}
+
+.logout,
+.games-cta,
+.secondary-button,
+.secondary-button-alt,
+.alert-button,
+.quick-contact,
+.invite-add-button,
+.contact-remove,
+.location-toggle input[type='checkbox'] {
+  transition: var(--transition);
+}
+
+.logout {
+  width: fit-content;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: rgba(46, 125, 50, 0.14);
+  color: #214f37;
+  font-weight: 700;
+}
+
+.logout:hover {
+  transform: translateY(-1px);
+  background: rgba(46, 125, 50, 0.2);
+}
+
+.games-panel {
+  display: grid;
+  gap: 20px;
+}
+
+.games-panel-header {
+  display: grid;
+  gap: 18px;
+}
+
+.games-panel-header > div {
+  display: grid;
+  gap: 10px;
+}
+
+.games-cta {
+  width: 100%;
+  min-height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2e7d32 0%, #4ba55a 100%);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.98rem;
+}
+
+.games-cta:hover {
+  transform: translateY(-2px);
+}
+
+.games-card-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.game-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 20px;
+  background: #f7faf6;
+  border: 1px solid rgba(46, 125, 50, 0.12);
+}
+
+.game-card:hover {
+  background: #f1f7f1;
+}
+
+.game-card .icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: rgba(33, 150, 243, 0.12);
+  color: #1976d2;
+}
+
+.game-card .title {
+  margin: 0 0 6px;
+  font-size: clamp(0.98rem, 2.4vw, 1rem);
+  font-weight: 800;
+  color: #12221a;
+  line-height: 1.3;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.game-card .desc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.convite-card,
+.invite-card,
+.contacts-card,
+.emergency-card,
+.denuncia-card,
+.support-summary-card,
+.status-card {
+  padding: 20px;
+}
+
+.convite-card {
+  display: grid;
+  gap: 12px;
+  background: #f6faf4;
+  border-color: rgba(46, 125, 50, 0.14);
+}
+
+.convite-card-clean {
+  background: #ffffff;
+}
+
+.welcome-card {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #edf7ed 100%);
+  border: 1px solid rgba(46, 125, 50, 0.12);
+  grid-template-columns: minmax(60px, 88px) minmax(0, 1fr) max-content;
+  align-items: flex-start;
+}
+
+.welcome-card h2 {
+  margin: 0;
+  font-size: clamp(1.15rem, 3vw, 1.55rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.welcome-avatar {
+  width: 78px;
+  height: 78px;
+  border-radius: 24px;
+  background: #eaf6eb;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: #2e7d32;
+  font-size: 1.45rem;
+}
+
+.welcome-info {
+  display: grid;
+  gap: 10px;
+}
+
+.welcome-label {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #4b6a58;
+}
+
+.welcome-label span {
+  font-weight: 800;
+  color: #12221a;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.welcome-note {
+  margin: 0;
+  color: #5e6e63;
+  font-size: 0.96rem;
+}
+
+.welcome-details {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.detail-pill {
+  border-radius: 16px;
+  background: rgba(46, 125, 50, 0.08);
+  padding: 12px 16px;
+  display: grid;
+  gap: 6px;
+}
+
+.detail-title {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #4f6b59;
+}
+
+.detail-pill strong {
+  margin: 0;
+  font-size: 1rem;
+  color: #12221a;
+}
+
+.welcome-actions {
+  justify-content: flex-end;
+}
+
+.secondary-button,
+.secondary-button-alt,
+.alert-button,
+.invite-add-button,
+.contact-remove,
+.button,
+.games-cta {
+  border-radius: 16px;
+  min-height: 48px;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.secondary-button,
+.secondary-button-alt,
+.invite-add-button {
+  background: rgba(46, 125, 50, 0.12);
+  color: #214f37;
+  border: 1px solid rgba(46, 125, 50, 0.16);
+}
+
+.secondary-button:hover,
+.secondary-button-alt:hover,
+.invite-add-button:hover {
+  transform: translateY(-1px);
+  background: rgba(46, 125, 50, 0.18);
+}
+
+.secondary-button-alt {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.alert-button {
+  background: linear-gradient(135deg, #d32f2f 0%, #f27171 100%);
+  color: #ffffff;
+  border: none;
+}
+
+.alert-button:hover {
+  transform: translateY(-1px);
+}
+
+.status-card {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+  background: #f8fbf6;
+}
+
+.status-card h4 {
+  margin: 0;
+  font-size: 1.45rem;
+  color: #1d321f;
+}
+
+.status-card p {
+  margin: 0;
+  color: #5b6b5f;
+}
+
+.section {
+  display: grid;
+  gap: 20px;
+  padding: 22px;
+}
+
+.section-primary {
+  border-radius: var(--radius);
+  border: 1px solid rgba(46, 125, 50, 0.12);
+}
+
+.section-summary {
+  background: #f8fbf6;
+  border-color: rgba(46, 125, 50, 0.14);
+}
+
+.section-header {
+  display: grid;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(34, 60, 33, 0.09);
+}
+
+.games-grid,
+.resources-grid,
+.trophy-support-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.games-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.game-card-simple {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid rgba(46, 125, 50, 0.12);
+  min-height: 136px;
+}
+
+.card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: rgba(46, 125, 50, 0.12);
+  color: #2e7d32;
+}
+
+.card-label {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #12221a;
+}
+
+.card-desc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.resource-card,
+.invite-card,
+.contacts-card,
+.emergency-card,
+.denuncia-card,
+.support-summary-card {
+  background: #ffffff;
+  border-color: rgba(46, 125, 50, 0.12);
+}
+
+.resource-value,
+.invite-code-value {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #1b371f;
+}
+
+.invite-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.invite-card,
+.contacts-card,
+.emergency-card,
+.denuncia-card,
+.support-summary-card {
+  padding: 22px;
+}
+
+.invite-code-block {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  background: #f7faf6;
+  border-radius: 20px;
+  border: 1px solid rgba(46, 125, 50, 0.1);
+}
+
+.invite-code-label {
+  font-size: 0.86rem;
+  color: #5f6f62;
+}
+
+.invite-code-value {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #163118;
+}
+
+.invite-code-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.invite-message {
+  margin: 0;
+  color: #4f643f;
+  font-size: 0.92rem;
+}
+
+.invite-add-button {
+  width: 100%;
+  border-radius: 16px;
+  padding: 14px 18px;
+}
+
+.invite-form-expanded {
+  display: grid;
+  gap: 12px;
+}
+
+.invite-input {
+  border: 1px solid rgba(34, 74, 31, 0.12);
+  border-radius: 16px;
+  padding: 14px 16px;
+}
+
+.form-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.contact-list {
+  display: grid;
+  gap: 12px;
+}
+
+.empty-contact-card {
+  padding: 16px;
+  border-radius: 18px;
+  background: #f8faf6;
+  color: #5b6c5f;
+}
+
+.contact-row-expanded {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(46, 125, 50, 0.12);
+}
+
+.contact-info {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(46, 125, 50, 0.12);
+  color: #2e7d32;
+  font-weight: 800;
+}
+
+.contact-name {
+  margin: 0;
+  font-weight: 700;
+  color: #12221a;
+}
+
+.contact-detail {
+  margin: 0;
+  color: #556a59;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact-remove {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  background: rgba(255, 74, 74, 0.12);
+  color: #b42222;
+  display: grid;
+  place-items: center;
+}
+
+.emergency-alert-section {
+  display: grid;
+  gap: 18px;
+}
+
+.emergency-card {
+  padding: 22px;
+}
+
+.emergency-form {
+  display: grid;
+  gap: 16px;
+}
+
+.location-toggle {
+  display: grid;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #425545;
+}
+
+.location-toggle label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.location-toggle input {
+  width: 18px;
+  height: 18px;
+}
+
+.location-status {
+  margin: 0;
+  color: #28502f;
+  font-size: 0.92rem;
+}
+
+.alert-success {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(46, 125, 50, 0.12);
+  color: #214d31;
+  font-weight: 700;
+}
+
+.support-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.quick-contacts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.quick-contact {
+  border-radius: 18px;
+  padding: 18px;
+  background: #f7faf6;
+  border: 1px solid rgba(46, 125, 50, 0.12);
+  color: #16331e;
+  display: grid;
+  gap: 10px;
+  text-align: left;
+}
+
+.quick-contact strong {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.quick-contact:hover {
+  background: #eff7ef;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 860px) {
+  .welcome-card,
+  .games-grid,
+  .resources-grid,
+  .trophy-support-grid,
+  .quick-contacts,
+  .invite-code-actions,
+  .form-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .header-card-top,
+  .section-top,
+  .card-heading,
+  .contact-row-expanded,
+  .welcome-details {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 560px) {
+  .welcome-card {
+    padding: 20px;
+  }
+
+  .games-cta,
+  .secondary-button,
+  .invite-add-button,
+  .alert-button {
+    min-height: 52px;
+  }
+}

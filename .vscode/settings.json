@@ -1,0 +1,6 @@
+{
+  "liveServer.settings.root": "teste01-main",
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.ignoreFiles": ["**/.gitignore", "**/.vscode/**"],
+  "typescript.tsdk": "./teste01-main/node_modules/typescript/lib"
+}

@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "workspaces": ["teste01-main"],
+  "scripts": {
+    "dev": "npm --prefix teste01-main run dev",
+    "build": "npm --prefix teste01-main run build",
+    "preview": "npm --prefix teste01-main run preview",
+    "install": "npm --prefix teste01-main install"
+  }
+}
